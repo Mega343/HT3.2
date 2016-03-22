@@ -6,12 +6,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
+import static java.util.Collections.sort;
+
 public class FlowerShop {
 
 
 
    static int countOfRose;
-   static  int countOfRomashka;
+   static int countOfRomashka;
    static int countOfTulip;
    static int countOfAstra;
    static int lenghtOfRose;
@@ -125,11 +127,38 @@ public class FlowerShop {
 
         RoseShrub roseShrub = new RoseShrub();
 
+
+
         HashMap<Integer, Integer> listofRoseShurbs = new HashMap<>(); // Теперь коллекций стало несколько =)
         roseShrub.listofRoseShurbsAdder(listofRoseShurbs);
         printList(flowers);
         printMap(listofRoseShurbs);
 
+
+        Rose rose1 = new Rose("red", 60, 18);
+        Rose rose2 = new Rose("red", 50, 15);
+        Rose rose3 = new Rose("red", 40, 12);
+        Rose rose4 = new Rose("yellow", 70, 19);
+        Rose rose5 = new Rose("pink", 80, 27);
+        Rose rose6 = new Rose("red", 35, 8);
+        Rose rose7 = new Rose("white", 60, 15);
+        Rose rose8 = new Rose("white", 70, 17);
+        Rose rose9 = new Rose("white", 80, 21);
+        Rose rose10 = new Rose("blue", 60, 35);
+        ArrayList<Rose> roseList = new ArrayList<>(); // Теперь их намного больше чем несколько))
+        roseList.add(rose1);
+        roseList.add(rose2);
+        roseList.add(rose3);
+        roseList.add(rose4);
+        roseList.add(rose5);
+        roseList.add(rose6);
+        roseList.add(rose7);
+        roseList.add(rose8);
+        roseList.add(rose9);
+        roseList.add(rose10);
+        Rose rose = new Rose(null, 0, 0);
+
+        rose.roseSort(roseList); // отсортировали коллекцию по цене роз не используя Сollections.sort()
 
 
     }
