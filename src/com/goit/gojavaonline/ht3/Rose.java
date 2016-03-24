@@ -19,7 +19,6 @@ public class Rose extends Flower implements Comparable{
 
 
 
-
     public int compareTo(Object obj)
     {
         Rose tmp = (Rose) obj;

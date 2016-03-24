@@ -161,7 +161,18 @@ public class FlowerShop {
         rose.roseSort(roseList); // отсортировали коллекцию по цене роз не используя Сollections.sort()
 
 
-    }
+        TreeSet<Rose> roseTreeSet = new TreeSet<>(); //упорядоченная коллекция
+        for (int i = 0; i < roseList.size(); i++) {
+            roseTreeSet.add(roseList.get(i));
+        }
+        System.out.println();
+        for (Rose r: roseTreeSet) {
+            System.out.println(r);
+        }
+        }
+
+
+
 
         public static void addFlowerToShop(String answer){
          if (answer.equals("yes")) {
